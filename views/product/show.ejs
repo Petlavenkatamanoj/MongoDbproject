@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= prod.name %></title>
+</head>
+<body>
+  <h1>Product Details</h1>
+  <ul>
+    <li>Name: <%= prod.name %></li>
+    <li>Price: ₹<%= prod.price %></li>
+    <li>Category: <%= prod.category %></li>
+  </ul>
+  <a href="/product">Go Back</a>
+  <a href="/product/<%= prod._id %>/edit">Edit Product</a>
+</body>
+</html>
