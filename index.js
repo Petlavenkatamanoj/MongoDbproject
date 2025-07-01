@@ -54,6 +54,11 @@ app.put("/product/:id", asyncHandler(async (req, res) => {
   });
   res.redirect(`/product/${prod._id}`);
 }));
+app.delete("/product/:id",asyncHandler(async (req,res)=>{
+  const { id }=req.params;
+  await product.findByIdAndDelete(id);
+  res.redirect("/product");
+}))
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
